@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover your perfect career path with CareerOption.Live - Expert guidance for students and professionals seeking their dream careers.">
+    <meta name="keywords" content="career guidance, career roadmap, career options, student careers, professional development">
+    <meta name="author" content="CareerOption.Live">
+    <title>CareerOption.Live - Find Your Perfect Career Path</title>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://careeroption.live/">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema Markup - Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CareerOption.Live",
+        "url": "https://careeroption.live",
+        "logo": "https://careeroption.live/logo.png",
+        "description": "Professional career guidance platform for students and professionals",
+        "sameAs": [
+            "https://twitter.com/careeroption",
+            "https://facebook.com/careeroption",
+            "https://linkedin.com/company/careeroption"
+        ]
+    }
+    </script>
+    
+    <!-- Schema Markup - WebPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "CareerOption.Live - Career Guidance Platform",
+        "description": "Find your perfect career path with expert guidance and comprehensive career roadmaps",
+        "url": "https://careeroption.live"
+    }
+    </script>
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container" aria-label="Main navigation">
+            <div class="nav__logo">
+                <a href="/">CareerOption.Live</a>
+            </div>
+            
+            <ul class="nav__menu" id="navMenu">
+                <button class="nav__close" id="navClose" aria-label="Close navigation menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <li class="nav__item">
+                    <a href="/" class="nav__link active">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/career-roadmap.html" class="nav__link">Career Roadmap</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/about.html" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/contact.html" class="nav__link">Contact Us</a>
+                </li>
+            </ul>
+            
+            <div class="nav__actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero__container container">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    Transform Your <span class="highlight">Dreams</span> Into Your <span class="highlight">Career</span>
+                </h1>
+                <p class="hero__description">
+                    Navigate your professional journey with expert guidance, comprehensive roadmaps, and actionable insights tailored for your success.
+                </p>
+                <div class="hero__buttons">
+                    <a href="/career-roadmap" class="btn btn-primary">
+                        <i class="fas fa-compass"></i> Explore Careers
+                    </a>
+                    <a href="/blogs" class="btn btn-secondary">
+                        <i class="fas fa-book-open"></i> Read Articles
+                    </a>
+                </div>
+            </div>
+            <div class="hero__image">
+                <div class="hero__illustration">
+                    <i class="fas fa-rocket"></i>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Career Categories Slider -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section__title">Explore Career Categories</h2>
+            <p class="section__subtitle">Discover diverse career paths across multiple industries</p>
+        </div>
+        
+        <div class="categories__slider">
+            <div class="categories__track" id="categoriesTrack">
+                <a href="career-roadmap.html#engineering" class="category__card" aria-label="Engineering careers">
+                    <i class="fas fa-cogs"></i>
+                    <span>Engineering</span>
+                </a>
+                <a href="career-roadmap.html#design" class="category__card" aria-label="Design careers">
+                    <i class="fas fa-palette"></i>
+                    <span>Design</span>
+                </a>
+                <a href="career-roadmap.html#law" class="category__card" aria-label="Law careers">
+                    <i class="fas fa-gavel"></i>
+                    <span>Law</span>
+                </a>
+                <a href="career-roadmap.html#management" class="category__card" aria-label="Management careers">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Management</span>
+                </a>
+                <a href="career-roadmap.html#medical" class="category__card" aria-label="Medical careers">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>Medical</span>
+                </a>
+                <a href="career-roadmap.html#government" class="category__card" aria-label="Government jobs">
+                    <i class="fas fa-landmark"></i>
+                    <span>Govt Jobs</span>
+                </a>
+                <a href="career-roadmap.html#it" class="category__card" aria-label="IT careers">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>IT</span>
+                </a>
+               
+                <a href="career-roadmap.html#science" class="category__card" aria-label="Science careers">
+                    <i class="fas fa-flask"></i>
+                    <span>Science</span>
+                </a>
+                <a href="career-roadmap.html#commerce" class="category__card" aria-label="Commerce careers">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Commerce</span>
+                </a>
+                <a href="career-roadmap.html#arts" class="category__card" aria-label="Arts careers">
+                    <i class="fas fa-theater-masks"></i>
+                    <span>Arts</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blog Articles -->
+    <section class="blogs" id="blogs">
+        <div class="container">
+            <h2 class="section__title">Latest Career Insights</h2>
+            <p class="section__subtitle">Expert advice and guides to accelerate your career journey</p>
+            
+            <div class="blogs__grid">
+                <!-- Blog Card 1 -->
+                <!-- Blog Card 1 - HIGHEST TRENDING -->
+<article class="blog__card">
+    <div class="blog__image">
+        <img src="images/what-is-neet-exam-card.webp" alt="What is NEET Exam" loading="lazy">
+        <span class="blog__badge">
+            <i class="fas fa-stethoscope"></i> Medical
+        </span>
+    </div>
+    <div class="blog__content">
+        <h3 class="blog__title">What is the NEET Exam? Eligibility, Syllabus, Pattern &    ; How to Prepare</h3>
+        <p class="blog__excerpt">Everything about NEET — who can appear, exam pattern, subject-wise syllabus, marking scheme, and proven preparation strategies to crack it...</p>
+        <a href="/home-articles/what-is-Neet-Exam.html" class="blog__link">
+            Read more <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
+<!-- Blog Card 2 -->
+<article class="blog__card">
+    <div class="blog__image">
+        <img src="images/careeroption-after-class-12th-for-commerce-student-card.webp" alt="Career Options After 12th Commerce" loading="lazy">
+        <span class="blog__badge">
+            <i class="fas fa-chart-line"></i> Commerce
+        </span>
+    </div>
+    <div class="blog__content">
+        <h3 class="blog__title">Career Options After Class 12th for Commerce Students</h3>
+        <p class="blog__excerpt">Explore the best career paths after Class 12th Commerce — from CA, CS, and BBA to banking, law, and entrepreneurship. Find the right direction for your future...</p>
+        <a href="/home-articles/careeroption-after-class-12th-for-commercestudent.html" class="blog__link">
+            Read more <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
+<!-- Blog Card 3 -->
+<article class="blog__card">
+    <div class="blog__image">
+        <img src="/images/careeroption-after-class-12th-science-card.webp" alt="Career Options After 12th Science" loading="lazy">
+        <span class="blog__badge">
+            <i class="fas fa-flask"></i> Science
+        </span>
+    </div>
+    <div class="blog__content">
+        <h3 class="blog__title">Career Options After Class 12th for Science Students</h3>
+        <p class="blog__excerpt">Discover top career choices after Class 12th Science — engineering, medicine, research, IT, architecture, and more. Choose the path that matches your interests and goals...</p>
+        <a href="/home-articles/careeroption-after-class-12.html" class="blog__link">
+            Read more <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
+<!-- Blog Card 4 -->
+<article class="blog__card">
+    <div class="blog__image">
+        <img src="images/careeroption-after-class-12th-biology-card.webp" alt="Career Options After 12th Biology" loading="lazy">
+        <span class="blog__badge">
+            <i class="fas fa-dna"></i> Biology
+        </span>
+    </div>
+    <div class="blog__content">
+        <h3 class="blog__title">Career Options After Class 12th for Biology Students</h3>
+        <p class="blog__excerpt">Explore rewarding careers after Class 12th Biology — MBBS, BDS, pharmacy, biotechnology, nursing, agriculture, and more. Find the best fit for your passion in life sciences...</p>
+        <a href="/home-articles/careeroption-after-class-12th-for-biology-student.html" class="blog__link">
+            Read more <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
+<!-- Blog Card 5 -->
+<article class="blog__card">
+    <div class="blog__image">
+        <img src="images/what-is-computer-science-card.webp" alt="What is Computer Science" loading="lazy">
+        <span class="blog__badge">
+            <i class="fas fa-laptop-code"></i> IT
+        </span>
+    </div>
+    <div class="blog__content">
+        <h3 class="blog__title">What is Computer Science? Subjects, Career Paths & Scope in 2026</h3>
+        <p class="blog__excerpt">Explore the world of Computer Science — core subjects, top specializations, job roles, and why it remains one of the most in-demand fields globally...</p>
+        <a href="/home-articles/what-is-computer-science.html" class="blog__link">
+            Read more <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
+<!-- Blog Card 6 -->
+<article class="blog__card">
+    <div class="blog__image">
+        <img src="images/government-job-aspirant-card.webp" alt="NRA and CET Guide" loading="lazy">
+        <span class="blog__badge">
+            <i class="fas fa-landmark"></i> Govt Jobs
+        </span>
+    </div>
+    <div class="blog__content">
+        <h3 class="blog__title">NRA & Common Eligibility Test (CET): Complete Guide for Government Job Aspirants</h3>
+        <p class="blog__excerpt">Understand how the National Recruitment Agency and CET work — exam levels, score validity, language options, and how it simplifies government job recruitment...</p>
+        <a href="/home-articles/what-is-NRA-and-CET.html" class="blog__link">
+            Read more <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
+<!-- Blog Card 7 -->
+<article class="blog__card">
+    <div class="blog__image">
+        <img src="images/what-is-diploma-course-card.webp" alt="Diploma Career Guide" loading="lazy">
+        <span class="blog__badge">
+            <i class="fas fa-certificate"></i> Diploma
+        </span>
+    </div>
+    <div class="blog__content">
+        <h3 class="blog__title">What is a Diploma Course? Complete Guide to Benefits, Career Scope & Eligibility</h3>
+        <p class="blog__excerpt">Everything you need to know about diploma courses — from types and eligibility to career opportunities and salary expectations after completion...</p>
+        <a href="/home-articles/diploma-career-guide.html" class="blog__link">
+            Read more <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
+<!-- Blog Card 8 -->
+<article class="blog__card">
+    <div class="blog__image">
+        <img src="images/what-is-iti-course-card.webp" alt="What is ITI Course" loading="lazy">
+        <span class="blog__badge">
+            <i class="fas fa-tools"></i> Vocational
+        </span>
+    </div>
+    <div class="blog__content">
+        <h3 class="blog__title">What is an ITI Course? Trades, Eligibility, Fees & Career After ITI</h3>
+        <p class="blog__excerpt">A complete guide to Industrial Training Institute (ITI) courses — popular trades, admission process, government job opportunities, and salary after ITI...</p>
+        <a href="/home-articles/what-is-ITI-course.html" class="blog__link">
+            Read more <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+
+<!-- Blog Card 9 -->
+<article class="blog__card">
+    <div class="blog__image">
+        <img src="images/difference-between-bsc-and-btech-card.webp" alt="BSc vs BTech Comparison" loading="lazy">
+        <span class="blog__badge">
+            <i class="fas fa-graduation-cap"></i> Education
+        </span>
+    </div>
+    <div class="blog__content">
+        <h3 class="blog__title">BSc vs BTech: Key Differences, Career Scope & Which One to Choose</h3>
+        <p class="blog__excerpt">A detailed comparison of BSc and BTech degrees covering course structure, career opportunities, salary prospects, and how to pick the right path...</p>
+        <a href="/home-articles/difference-between-bsc-and-btech.html" class="blog__link">
+            Read more <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <!-- About Column -->
+                <div class="footer__column">
+                    <h3 class="footer__title">About CareerOption.Live</h3>
+                    <p class="footer__text">
+                        Empowering students and professionals to discover their perfect career path through expert guidance, comprehensive roadmaps, and actionable insights.
+                    </p>
+                   
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="footer__column">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/career-roadmap.html">Career Roadmap</a></li>
+                       
+                        <li><a href="/About.html">About</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Column -->
+                <div class="footer__column">
+                    <h3 class="footer__title">Legal</h3>
+                    <ul class="footer__links">
+                        <li><a href="/legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/legal/terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="/legal/disclaimer.html">Disclaimer</a></li>
+                        <li><a href="/legal/cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__tagline">Designed with <i class="fas fa-heart"></i> for Students and Dreamers</p>
+                <p class="footer__copyright">&copy; 2025 CareerOption.Live. All rights reserved.</p>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <button class="back-to-top" id="backToTop" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- Schema Markup - ItemList for Categories -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Engineering", "url": "https://careeroption.live/career-roadmap/engineering"},
+            {"@type": "ListItem", "position": 2, "name": "Design", "url": "https://careeroption.live/career-roadmap/design"},
+            {"@type": "ListItem", "position": 3, "name": "Law", "url": "https://careeroption.live/career-roadmap/law"},
+            {"@type": "ListItem", "position": 4, "name": "Management", "url": "https://careeroption.live/career-roadmap/management"},
+            {"@type": "ListItem", "position": 5, "name": "Medical", "url": "https://careeroption.live/career-roadmap/medical"},
+            {"@type": "ListItem", "position": 6, "name": "Government Jobs", "url": "https://careeroption.live/career-roadmap/government"},
+            {"@type": "ListItem", "position": 7, "name": "IT", "url": "https://careeroption.live/career-roadmap/it"},
+            {"@type": "ListItem", "position": 8, "name": "Startups", "url": "https://careeroption.live/career-roadmap/startups"},
+            {"@type": "ListItem", "position": 9, "name": "Science", "url": "https://careeroption.live/career-roadmap/science"},
+            {"@type": "ListItem", "position": 10, "name": "Commerce", "url": "https://careeroption.live/career-roadmap/commerce"},
+            {"@type": "ListItem", "position": 11, "name": "Arts", "url": "https://careeroption.live/career-roadmap/arts"}
+        ]
+    }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
