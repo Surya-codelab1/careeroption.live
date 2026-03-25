@@ -31,7 +31,7 @@
     /* Spacing */
     --header-height: 70px;
     --container-width: 1200px;
-    --section-padding: 5rem 0;
+    --section-padding: 4rem 0;
     
     /* Transitions */
     --transition: all 0.3s ease;
@@ -256,6 +256,7 @@ button {
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 1.5rem;
+    padding: 10px;
 }
 
 .hero__title .highlight {
@@ -311,7 +312,17 @@ button {
     color: var(--primary-color);
     transform: translateY(-3px);
 }
+@media (max-width: 768px) {
+    .btn {
+        padding: 0.6rem 1.2rem;  
+        font-size: 0.9rem;       
+        border-radius: 30px;    
+    }
 
+    .btn i {
+        font-size: 0.9rem;       
+    }
+}
 .hero__image {
     display: flex;
     justify-content: center;
@@ -354,6 +365,17 @@ button {
     background: rgba(99, 102, 241, 0.05);
     animation-delay: 0.5s;
 }
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .hero__image {
+        margin-top: 30px;
+    }
+}
+
 
 .scroll-indicator {
     position: absolute;
