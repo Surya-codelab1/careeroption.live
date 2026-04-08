@@ -61,24 +61,41 @@
     background: var(--bg-secondary);
 }
 
+/* =============================================
+   FIX: Grid layout — mobile-first, no sticky
+   ============================================= */
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;   /* single column on mobile */
     gap: 3rem;
     align-items: start;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Desktop layout - swap order */
+/* Desktop: two columns */
 @media screen and (min-width: 969px) {
     .contact-grid {
         grid-template-columns: 1fr 1.2fr;
     }
 }
 
-/* Contact Information */
+/* =============================================
+   FIX: Contact Info — remove sticky on mobile,
+   ensure it fills its grid cell properly
+   ============================================= */
 .contact-info {
-    position: sticky;
-    top: calc(var(--header-height) + 2rem);
+    width: 100%;
+    box-sizing: border-box;
+    /* sticky only on desktop */
+    position: static;
+}
+
+@media screen and (min-width: 969px) {
+    .contact-info {
+        position: sticky;
+        top: calc(var(--header-height) + 2rem);
+    }
 }
 
 .contact-info__title {
@@ -95,21 +112,30 @@
     margin-bottom: 2rem;
 }
 
+/* =============================================
+   FIX: Contact methods — prevent overflow/shrink
+   ============================================= */
 .contact-methods {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .contact-method {
     display: flex;
+    flex-direction: row;        /* FIX: always row except tiny screens */
+    align-items: flex-start;
     gap: 1rem;
     padding: 1.5rem;
     background: var(--bg-color);
     border-radius: 15px;
     border: 2px solid var(--border-color);
     transition: var(--transition);
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;               /* FIX: prevents grid blowout */
 }
 
 .contact-method:hover {
@@ -121,7 +147,8 @@
 .contact-method__icon {
     width: 50px;
     height: 50px;
-    min-width: 50px;
+    min-width: 50px;            /* FIX: icon never shrinks */
+    flex-shrink: 0;             /* FIX: icon never shrinks */
     border-radius: 12px;
     background: var(--gradient-primary);
     display: flex;
@@ -129,6 +156,11 @@
     justify-content: center;
     color: white;
     font-size: 1.5rem;
+}
+
+.contact-method__content {
+    flex: 1;
+    min-width: 0;               /* FIX: text wraps instead of overflowing */
 }
 
 .contact-method__content h3 {
@@ -144,6 +176,7 @@
     display: inline-block;
     margin-bottom: 0.25rem;
     transition: var(--transition);
+    word-break: break-word;     /* FIX: long emails/links don't overflow */
 }
 
 .contact-method__content a:hover {
@@ -159,6 +192,7 @@
     display: flex;
     gap: 0.75rem;
     margin-top: 0.5rem;
+    flex-wrap: wrap;            /* FIX: wraps on very small screens */
 }
 
 .social-links a {
@@ -171,6 +205,7 @@
     justify-content: center;
     color: var(--text-color);
     transition: var(--transition);
+    flex-shrink: 0;
 }
 
 .social-links a:hover {
@@ -185,6 +220,8 @@
     background: var(--bg-color);
     border-radius: 15px;
     border: 2px solid var(--border-color);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .quick-help h3 {
@@ -198,6 +235,9 @@
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .quick-help ul li a {
@@ -218,9 +258,13 @@
 
 .quick-help ul li a i {
     color: var(--primary-color);
+    flex-shrink: 0;
 }
 
-/* Contact Form */
+/* =============================================
+   FIX: Contact Form wrapper — full width,
+   no overflow
+   ============================================= */
 .contact-form-wrapper {
     background: var(--bg-color);
     padding: 2.5rem;
@@ -228,18 +272,22 @@
     box-shadow: var(--shadow-lg);
     border: 2px solid var(--border-color);
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    width: 100%;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    width: 100%;
 }
 
 .form-group label {
@@ -275,6 +323,8 @@
     color: var(--text-color);
     background: var(--bg-secondary);
     transition: var(--transition);
+    width: 100%;
+    box-sizing: border-box;     /* FIX: inputs never overflow their container */
 }
 
 .form-group input:focus,
@@ -298,6 +348,7 @@
     padding: 1.25rem 2rem;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .btn-submit:disabled {
@@ -323,6 +374,7 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    box-sizing: border-box;
     animation: fadeInScale 0.5s ease;
 }
 
@@ -377,6 +429,8 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .benefit-card {
@@ -386,6 +440,7 @@
     border-radius: 20px;
     border: 2px solid var(--border-color);
     transition: var(--transition);
+    box-sizing: border-box;
 }
 
 .benefit-card:hover {
@@ -470,7 +525,9 @@
     }
 }
 
-/* Responsive Design */
+/* =============================================
+   RESPONSIVE FIXES
+   ============================================= */
 @media screen and (max-width: 968px) {
     .contact-hero__title {
         font-size: var(--font-size-4xl);
@@ -482,7 +539,7 @@
     }
 
     .contact-info {
-        position: static;
+        position: static;       /* FIX: no sticky on tablet/mobile */
     }
 
     .contact-form-wrapper {
@@ -508,13 +565,20 @@
         padding: 1.5rem;
     }
 
+    /* FIX: stack contact method icon + text on tiny screens */
     .contact-method {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
 
     .contact-method__icon {
         margin: 0 auto;
+    }
+
+    .contact-method__content {
+        width: 100%;
+        text-align: center;
     }
 
     .social-links {

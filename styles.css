@@ -136,6 +136,37 @@ button {
     background: rgba(17, 24, 39, 0.8);
 }
 
+
+.blog__image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px; /* optional */
+}
+
+.blog__image img {
+    width: 100%;
+    display: block;
+}
+
+/* Dark shadow overlay */
+.blog__image::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.493),  /* dark bottom */
+        rgba(0, 0, 0, 0.253),
+        transparent
+    );
+
+    pointer-events: none;
+}
+
 .nav {
     display: flex;
     align-items: center;
@@ -492,6 +523,7 @@ button {
 .blog__card {
     background: var(--bg-color);
     border-radius: 20px;
+    border: 0.1px solid rgb(152, 152, 248);
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
